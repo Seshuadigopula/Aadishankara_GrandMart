@@ -7,7 +7,7 @@ const ComboOffers = () => {
       <Container>
         <Row>
       <Card style={{ width: '18rem' }}>
-        <CardImg top src="/Images/image1.jpg" alt="Combo Offer" />
+        <CardImg top src="/Images/image1.webp" alt="Combo Offer" />
         <CardBody>
           <CardTitle>Combo Offer 1</CardTitle>
           <Button color="secondary">View Offer</Button>
@@ -16,18 +16,34 @@ const ComboOffers = () => {
       <Card style={{ width: '18rem' }}>
         <CardImg top src="/Images/image2.jpg" alt="Combo Offer" />
         <CardBody>
-          <CardTitle>Combo Offer 1</CardTitle>
+          <CardTitle>Combo Offer 2</CardTitle>
           <Button color="secondary">View Offer</Button>
         </CardBody>
       </Card>
       <Card style={{ width: '18rem' }}>
-        <CardImg top src="/Images/images3.jpg" alt="Combo Offer" />
+        <CardImg top src="/Images/image3.jpg" alt="Combo Offer" />
         <CardBody>
-          <CardTitle>Combo Offer 1</CardTitle>
+          <CardTitle>Combo Offer 3</CardTitle>
+          <Button color="secondary">View Offer</Button>
+        </CardBody>
+      </Card>
+      <Card style={{ width: '18rem' }}>
+        <CardImg top src="/Images/image4.jpg" alt="Combo Offer" />
+        <CardBody>
+          <CardTitle>Combo Offer 4</CardTitle>
           <Button color="secondary">View Offer</Button>
         </CardBody>
       </Card>
       {/* Repeat similar cards for other combo offers */}
+        </Row>
+        <Row>
+        <Card style={{ width: '18rem' }}>
+        <CardImg top src="/Images/image5.webp" alt="Combo Offer" />
+        <CardBody>
+          <CardTitle>Combo Offer 5</CardTitle>
+          <Button color="secondary">View Offer</Button>
+        </CardBody>
+        </Card>
         </Row>
       </Container>
     </div>
