@@ -1,0 +1,237 @@
+/* Base styles for the navbar */
+.navbar {
+  background-color: #f8f9fa;  /* Light background */
+  padding: 15px 0;  /* Padding around the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Light shadow */
+}
+
+/* Navbar Brand (Logo) */
+.navbar-logo {
+  width: 150px;  /* Logo width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* Navbar Links Container */
+.navbar-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;  /* Align links to the left */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  color: #333;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+  color: #007bff;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Search Form */
+.navbar .form-inline {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar .form-control {
+  border-radius: 20px;
+  padding-left: 15px;
+  margin-right: 10px;
+}
+
+/* Search Button */
+.navbar .btn-primary {
+  border-radius: 20px;
+  padding: 7px 20px;
+  background-color: #007bff;
+  border: none;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #0056b3;
+}
+/* Adjust the width of the search input field */
+.navbar .form-control {
+  width: 100%;  /* You can adjust this value to make the search bar as wide as you want */
+  max-width: 900px; /* This ensures that the search bar doesn't get too wide */
+  border-radius: 30px;  /* Optional: smooth rounded corners */
+  padding-left: 15px;
+  transition: width 0.3s ease;  /* Optional: smooth transition when resizing */
+}
+
+/* Optional: If you want the search bar to be wider on desktop view */
+@media (min-width: 768px) {
+  .navbar .form-control {
+    width: 70%;  /* Adjust this percentage to make the search bar wider on larger screens */
+  }
+}
+
+/* Mobile Navigation Toggle (Hamburger menu) */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffff;
+}
+
+/* Mobile Menu */
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 15px 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;  /* Stack items vertically on small screens */
+    align-items: center;
+  }
+
+  .navbar-logo {
+    width: 120px;  /* Adjust logo size on small screens */
+  }
+
+  .navbar-nav {
+    flex-direction: column;  /* Stack the navbar links vertically */
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar .nav-link {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .navbar .form-inline {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .navbar .form-control {
+    width: 80%;
+  }
+
+  .navbar .btn-primary {
+    width: 18%;
+  }
+}
+
+
+.slider-container {
+  margin: 20px 0;
+}
+
+.product-card {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+/* Basic styles for the slider container */
+.slider-container {
+  position: relative;
+  width: 80%; /* Adjust container width (e.g., 80% of the parent container) */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.slide {
+  flex-shrink: 0; /* Prevent shrinking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ensure each slide takes the full width of the container */
+}
+
+.slide img {
+  max-width: 100%; /* Ensure the image does not stretch beyond its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image is contained and does not overflow */
+}
+
+
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+.prev {
+  left: 10px; /* Previous button position */
+}
+
+.next {
+  right: 10px; /* Next button position */
+}
+
+/* Optional media query for responsive design */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .caption {
+    font-size: 14px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .nav-button {
+    font-size: 24px;
+  }
+}
+
+.preview{
+  text-align: left;
+  text-shadow: #333;
+  padding: 50px;
+  max-width: 80%;
+}
+
+.card-image {
+  width: 100%;        /* Ensures the image takes the full width of the container */
+  height: 200px;      /* Set a fixed height for uniformity */
+  object-fit: cover;  /* Crops the image to fill the area, preserving aspect ratio */
+}
+

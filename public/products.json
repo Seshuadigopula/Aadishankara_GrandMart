@@ -1,0 +1,65 @@
+[
+    {
+      "id": "1",
+      "name": "Toor Dal",
+      "price": "170.00",
+      "description": "Nagpur special Dal",
+      "image_path": "/Images/Toordal.webp"
+    },
+    {
+      "id": "2",
+      "name": "Cashew Nut - 250gm",
+      "price": "200.00",
+      "description": "Vetapalem nuts",
+      "image_path": "/Images/Cashew_nuts.webp"
+    },
+    {
+      "id": "3",
+      "name": "Almonds",
+      "price": "180.00",
+      "description": "Large size special Almonds",
+      "image_path": "/Images/Almonds.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Rice",
+      "price": "60.00",
+      "description": "Sona masoori rice",
+      "image_path": "/Images/Rice.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Freedom-1L",
+      "price": "130.00",
+      "description": "Refined sunflower oil",
+      "image_path": "/Images/Freedom.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Rin Liquid-1L",
+      "price": "220.00",
+      "description": "Rin matic liquid for top door washing mechines.",
+      "image_path": "/Images/Rinliquid.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Agarbati",
+      "price": "50.00",
+      "description": "Pooje Agarbatti with rich aroma",
+      "image_path": "/images/Agarbati.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Thumbsup-2L",
+      "price": "80.00",
+      "description": "Soft Drink",
+      "image_path": "/Images/Thumbsup.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Coke-2L",
+      "price": "75.00",
+      "description": "Soft Drink",
+      "image_path": "/images/Coke.jpg"
+    }
+  ]
