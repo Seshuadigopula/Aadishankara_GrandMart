@@ -21,7 +21,7 @@ const ComboOffers = () => {
         </CardBody>
       </Card>
       <Card style={{ width: '18rem' }}>
-        <CardImg top src="/Images/image3.jpg" alt="Combo Offer" />
+        <CardImg top src="/Images/images3.jpg" alt="Combo Offer" />
         <CardBody>
           <CardTitle>Combo Offer 1</CardTitle>
           <Button color="secondary">View Offer</Button>
