@@ -17,6 +17,7 @@ function Products({ searchTerm }) {
     );
     const addToCart = (product) => {
         setCartItems((prevItems) => [...prevItems, product]);
+        <p>{cartItems} is added</p>
       };
     return (
         <div>
