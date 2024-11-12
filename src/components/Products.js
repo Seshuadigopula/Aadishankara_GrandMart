@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Products({ searchTerm }) {
     const [products, setProducts] = useState([]);
-    const [CartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
         fetch('/products.json')
             .then((response) => response.json())
