@@ -5,6 +5,7 @@ const ComboOffers = () => {
   return (
     <div className="d-flex flex-wrap">
       <Container>
+      <h2 style={{textAlign:'left'}}>Offers</h2>
         <Row>
       <Card style={{ width: '18rem' }}>
         <CardImg top src="/Images/image1.webp" alt="Combo Offer" />
@@ -34,7 +35,6 @@ const ComboOffers = () => {
           <Button color="secondary">View Offer</Button>
         </CardBody>
       </Card>
-      {/* Repeat similar cards for other combo offers */}
         </Row>
         <Row>
         <Card style={{ width: '18rem' }}>

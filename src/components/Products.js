@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Products({ searchTerm }) {
     const [products, setProducts] = useState([]);
-
+    const [CartItems, setCartItems] = useState([]);
     useEffect(() => {
         fetch('/products.json')
             .then((response) => response.json())
@@ -15,7 +15,9 @@ function Products({ searchTerm }) {
     const filteredProducts = products.filter(product =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
+    const addToCart = (product) => {
+        setCartItems((prevItems) => [...prevItems, product]);
+      };
     return (
         <div>
             <div className="preview">
@@ -31,7 +33,7 @@ function Products({ searchTerm }) {
                                     <h5 className="card-title">{product.name}</h5>
                                     <p className="card-text">₹{product.price}</p>
                                     <p className="card-text">{product.description}</p>
-                                    <button className="btn btn-primary">View Details</button>
+                                    <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
                                 </div>
                             </div>
                         </Col>

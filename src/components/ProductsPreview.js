@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import './App.css'; 
+import './App.css';
 
-function ProductsPreview({ searchTerm }) {
+function ProductsPreview({ searchTerm, addToCart }) {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await fetch('/products.json'); // Replace with your API endpoint
+          const response = await fetch('/products.json');
           const data = await response.json();
           setProducts(data);
         } catch (error) {
           console.error("Error fetching products:", error);
         }
       };
-  
+
       fetchProducts();
     }, []);
 
-    // Filter products based on search term
     const filteredProducts = products.filter(product =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -38,8 +37,7 @@ function ProductsPreview({ searchTerm }) {
                                 <div className="card-body">
                                     <h5 className="card-title">{product.name}</h5>
                                     <p className="card-text">₹{product.price}</p>
-                                    <p className="card-text">{product.description}</p>
-                                    <button className="btn btn-primary">View Details</button>
+                                    <button onClick={() => addToCart(product)} className="btn btn-primary">Add to Cart</button>
                                 </div>
                             </div>
                         </Col>
