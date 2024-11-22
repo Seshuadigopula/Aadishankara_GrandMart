@@ -18,9 +18,9 @@ function Footer() {
           <div className="w-full md:w-1/3">
             <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-gray-800">Facebook</a>
-              <a href="#" className="text-gray-600 hover:text-gray-800">Twitter</a>
-              <a href="#" className="text-gray-600 hover:text-gray-800">Instagram</a>
+              <a href="/" className="text-gray-600 hover:text-gray-800">Facebook</a>
+              <a href="/" className="text-gray-600 hover:text-gray-800">Twitter</a>
+              <a href="/" className="text-gray-600 hover:text-gray-800">Instagram</a>
             </div>
           </div>
         </div>

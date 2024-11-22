@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from '../components/Slider';
-import SearchBar from '../components/SearchBar';
 import ProductList from '../components/ProductList';
 
 function Home({ products, addToCart, isLoggedIn }) {
