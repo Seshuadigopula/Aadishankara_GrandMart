@@ -8,7 +8,7 @@ function AboutUs() {
         <div>
           <h2 className="text-xl font-semibold mb-4">Our Story</h2>
           <p className="mb-4">
-            Aadi Shankara Grand Mart was founded in 2005 with a simple mission: to provide high-quality groceries and household items to our community at affordable prices. Our journey began with a small store and a big dream, and over the years, we've grown to become a trusted name in the neighborhood.
+            Aadi Shankara Grand Mart was founded in 2015 with a simple mission: to provide high-quality groceries and household items to our community at affordable prices. Our journey began with a small store and a big dream, and over the years, we've grown to become a trusted name in the neighborhood.
           </p>
           <p>
             We believe that quality matters in every aspect of life, which is why we carefully select each product that goes on our shelves. Our commitment to excellence extends beyond our products to our customer service, ensuring that every visit to Aadi Shankara Grand Mart is a pleasant experience.

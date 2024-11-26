@@ -11,8 +11,8 @@ function Footer() {
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-            <p>123 Main Street, City</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Aadi Shankara Valley, Arepalli Road,Cherukupalli</p>
+            <p>Phone: 8341132839</p>
             <p>Email: info@aadishankaragrandmart.com</p>
           </div>
           <div className="w-full md:w-1/3">
