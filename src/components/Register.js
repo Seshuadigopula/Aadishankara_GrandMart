@@ -9,6 +9,7 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+<<<<<<< HEAD
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -28,6 +29,39 @@ function Register() {
 
     alert('Registration successful!');
     navigate('/login');
+=======
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Check if user already exists
+      const checkResponse = await fetch(`http://localhost:3001/users?email=${formData.email}`);
+      const existingUsers = await checkResponse.json();
+
+      if (existingUsers.length > 0) {
+        alert('User with this email already exists');
+        return;
+      }
+
+      // Add new user
+      const response = await fetch('http://localhost:3001/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Registration successful!');
+        navigate('/login');
+      } else {
+        throw new Error('Registration failed');
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      alert('Registration failed. Please try again.');
+    }
+>>>>>>> 8d8309bfe30e284844e309e6182040c6c5aa876a
   };
 
   return (
@@ -70,10 +104,14 @@ function Register() {
             className="w-full p-2 border rounded"
           />
         </div>
+<<<<<<< HEAD
         <button
           type="submit"
           className="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700"
         >
+=======
+        <button type="submit" className="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">
+>>>>>>> 8d8309bfe30e284844e309e6182040c6c5aa876a
           Register
         </button>
       </form>
@@ -82,3 +120,7 @@ function Register() {
 }
 
 export default Register;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8d8309bfe30e284844e309e6182040c6c5aa876a
