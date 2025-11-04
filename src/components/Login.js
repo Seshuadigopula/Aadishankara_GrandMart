@@ -9,23 +9,24 @@ function Login({ onLogin }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(`http://localhost:3000/users?email=${formData.email}&password=${formData.password}`);
-      const users = await response.json();
-      
-      if (users.length === 1) {
-        const user = users[0];
-        onLogin(user);
-        alert('Login successful!');
-        navigate('/');
-      } else {
-        alert('Invalid email or password');
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-      alert('Login failed. Please try again.');
+
+    // Get stored users from localStorage
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if entered credentials match any stored user
+    const user = storedUsers.find(
+      (u) => u.email === formData.email && u.password === formData.password
+    );
+
+    if (user) {
+      onLogin(user);
+      localStorage.setItem('loggedInUser', JSON.stringify(user)); // optional: store current user
+      alert('Login successful!');
+      navigate('/');
+    } else {
+      alert('Invalid email or password');
     }
   };
 
@@ -57,7 +58,10 @@ function Login({ onLogin }) {
             className="w-full p-2 border rounded"
           />
         </div>
-        <button type="submit" className="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">
+        <button
+          type="submit"
+          className="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700"
+        >
           Login
         </button>
       </form>
@@ -66,4 +70,3 @@ function Login({ onLogin }) {
 }
 
 export default Login;
-
